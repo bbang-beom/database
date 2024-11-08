@@ -114,3 +114,5 @@ insert into reservation VALUES (1, 2, 10, 60, '2020-09-01');
 Update room set price = price * 1.1;
 select * from room;
 
+select * from orders;
+

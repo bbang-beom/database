@@ -57,3 +57,38 @@ select * from vw_orders;
 
 select orderid, bookname, saleprice
 from vw_orders;
+
+-- 뷰의 수정
+-- 뷰의 수정은 creaet view문에 or replace명령을 더하여 작성한다.
+-- 문법
+-- create or replace view 뷰이름 [(열이름[,...n])]
+-- as select문
+
+-- create table if not exists
+
+-- 이전에 생성한 뷰 vw_customer는 주소가 대한민국인 고객을 보여준다.
+-- 이 뷰를 영국을 주소로 가진 고객으로 변경
+create or replace view vw_customer(custid, name, address)
+as select custid, name, address from customer
+where address like '%영국%';
+
+select * from vw_customer;
+
+-- customer 테이블에 영국 주소를 갖는 데이터 추가
+select * from customer;
+insert into customer values(6, '손흥민', '영국 런던', 000-9000-0001);
+
+-- 테이블을 근간으로 뷰를 만들면 테이블의 데이터가 변경되면 뷰도 같이 변경
+
+-- 뷰의 삭제
+-- 문법
+-- drop view 뷰이름 [,...n];
+
+-- 뷰 vw_customer 삭제
+drop view vw_customer;
+select * from vw_customer;
+
+-- 시스템 뷰
+-- 데이터베이스 개체(테이블, 함수, 뷰 등)나 시스템의 통계 정보 등을 
+-- 사용자가 직접 확인할 수 있도록 시스템 뷰 제공
+select * from User_Customer;
