@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0A6B873-2073-607C-C437-DDAC6C818FE3" name="Tpart">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:31 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="partid" id="2E4E082A-4D2A-ABFC-4BF1-54F6C77CBACC">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:51 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="partname" id="1B970A27-3CC5-4828-25C0-0D0CA9E2BF74">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:51 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="36F015E3-0847-8404-CE47-F3B83EB4B3D8">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:32:40 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E5004E5F-25A1-CDE0-BA53-D7A7FA54B60E" name="Tpart_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:51 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E4E082A-4D2A-ABFC-4BF1-54F6C77CBACC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF139D58-9A76-B482-8DA5-3891E6ACF6B7" containerWithKeyObject="2CF79E7C-F4EA-EC3F-03A6-36B37AD0EBD3" localFKIndex="E327B7A5-7C61-CCF3-D63F-300F1A702D13" name="Torder_Tpart_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:44:17 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<referredTableLongName>Tpart</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D0A6B873-2073-607C-C437-DDAC6C818FE3</referredTableID>
+<keyObject>E5004E5F-25A1-CDE0-BA53-D7A7FA54B60E</keyObject>
+<referredKeyID>E5004E5F-25A1-CDE0-BA53-D7A7FA54B60E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>partid</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

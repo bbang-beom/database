@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2CF79E7C-F4EA-EC3F-03A6-36B37AD0EBD3" name="Torder">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:30:56 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="custid" id="A2D78439-AC01-AB1C-0611-0C470C70F424">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:33:08 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36B2EA71-74FA-6C08-3A41-82B3F89B7E7E" referredColumn="EB6F9511-7162-47AE-0782-09FC8F069851"/>
+</associations>
+</Column>
+<Column name="orderid" id="33FCBBDD-1AD9-F9A6-A822-1DA58AF24AAE">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:06 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="partid" id="318CADC1-66D8-ADB3-24FB-7BBEF00E78AE">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:44:17 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF139D58-9A76-B482-8DA5-3891E6ACF6B7" referredColumn="2E4E082A-4D2A-ABFC-4BF1-54F6C77CBACC"/>
+</associations>
+</Column>
+<Column name="amount" id="9B0FD1ED-2FF3-4B5A-FE89-4F9D8A82E8C5">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:45:08 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_date" id="B777C8AC-09D8-FA15-4EFD-8B5B60496B16">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:28 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6FCF0571-5963-5086-0438-E3FF8826F4F2" name="Torder_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:31:08 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33FCBBDD-1AD9-F9A6-A822-1DA58AF24AAE"/>
+<colUsage columnID="318CADC1-66D8-ADB3-24FB-7BBEF00E78AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E0A58BFA-A81E-DD52-66AB-24E6646A179A" name="Torder_Tcustomer_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:33:08 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2D78439-AC01-AB1C-0611-0C470C70F424"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E327B7A5-7C61-CCF3-D63F-300F1A702D13" name="Torder_Tpart_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:44:17 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="318CADC1-66D8-ADB3-24FB-7BBEF00E78AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="20AF4124-BC84-1199-22B7-60F63E893D39" name="Payment">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:12:44 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="suppid" id="4A799C04-F3DF-863C-5FAB-6F818CFA7046">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:13:26 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09EE1C3B-49D6-C57D-3CA1-0B21B2776B85" referredColumn="3AD4A095-56FA-9C32-A6D6-49D18EA0707A"/>
+</associations>
+</Column>
+<Column name="partnumber" id="32D7CCB3-98BF-19BA-829F-CA7DDC03B5EB">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:13:31 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BFF1ACD2-6350-A875-D864-22623CA2EC04" referredColumn="B5C57BAD-EC70-0837-F875-B3175AA0B095"/>
+</associations>
+</Column>
+<Column name="price" id="D0B48DC6-2BF7-FE26-87E2-BD701B4FB4F3">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:14:13 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1824EFD5-6734-DACD-05B2-B2AB59DD62C8" name="Payment_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:25:56 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A799C04-F3DF-863C-5FAB-6F818CFA7046"/>
+<colUsage columnID="32D7CCB3-98BF-19BA-829F-CA7DDC03B5EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29BEB254-2D8E-7561-C6C9-3B74F322CECF" name="Order_Supplier_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:13:26 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A799C04-F3DF-863C-5FAB-6F818CFA7046"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C983866-AC25-32FB-1F89-87FFAF7C6E4D" name="Order_Part_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:13:31 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32D7CCB3-98BF-19BA-829F-CA7DDC03B5EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

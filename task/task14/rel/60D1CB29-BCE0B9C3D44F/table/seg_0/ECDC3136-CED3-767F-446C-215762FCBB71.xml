@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ECDC3136-CED3-767F-446C-215762FCBB71" name="Supplier">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:07:39 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="suppid" id="3AD4A095-56FA-9C32-A6D6-49D18EA0707A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:08:30 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="9E4B1D41-8C6B-A15B-1064-D24908BAE80D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:08:04 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="suppaddress" id="C35E51E6-F0E5-2686-67DF-A93B9551574D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:08:46 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EBC7A26B-3F72-ADAE-FCA7-4684388AB2C2" name="Supplier_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:08:30 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3AD4A095-56FA-9C32-A6D6-49D18EA0707A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

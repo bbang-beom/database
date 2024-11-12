@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="38B4FF31-27ED-6E15-2B0C-7DEF72F00800" name="Tcustomer">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:28:16 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="custid" id="EB6F9511-7162-47AE-0782-09FC8F069851">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:28:45 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="A2B0A8E3-283A-045F-4A98-35416426E5B1">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:28:56 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="EC610736-AFEF-781C-1D3C-69E47B9F5E22">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:29:06 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="DCFCB30D-C2B7-5ABC-FB44-1A91DA3EC5AB">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:30:32 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ACC15A3C-A32F-E4D8-89BA-7FA3103A8827" name="Tcustomer_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-12 07:30:46 UTC</createdTime>
+<ownerDesignName>task14</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB6F9511-7162-47AE-0782-09FC8F069851"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
