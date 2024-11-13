@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF538D78-8516-1813-B7E6-71A505AEAF78" name="Chart">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:13:13 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="chartid" id="D1AAD138-E905-4DA0-A544-13B464742425">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:14:58 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docid" id="C0F2CDD3-9B3C-AC3B-ED2A-0DF7510345A6">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:16:02 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0C92BCF-1E9D-4822-436A-456784CBC4E3" referredColumn="41D2A7A1-3679-6F57-8BF7-5650A4871E9F"/>
+</associations>
+</Column>
+<Column name="nurid" id="48A8AD78-5B1C-622C-F693-3C39EAA5B904">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:49 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BD1C8597-748C-9610-9E2A-27AA6070F80E" referredColumn="B5501FC2-84A7-83D5-9AA3-86CEDF876455"/>
+</associations>
+</Column>
+<Column name="patid" id="590F30E0-C9E3-4DFC-0FEA-578143BB5C29">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:45 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18403D79-FE11-A9FA-5045-70C1118C9B87" referredColumn="2DE4E310-4C71-9525-51A3-36EE305A455F"/>
+</associations>
+</Column>
+<Column name="tr_date" id="9B1341DF-B0AA-CA73-49C7-95DEC88DF1E1">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:59 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C856AF5A-2438-78D9-7538-39EE65D71756" referredColumn="32D9EE4D-C632-BCE0-2CA0-33CE71BD6F68"/>
+</associations>
+</Column>
+<Column name="trnumber" id="54460250-633A-7464-47D8-5F1B3DAD3A6A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:59 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C856AF5A-2438-78D9-7538-39EE65D71756" referredColumn="1772BD2B-EC07-F452-D7B4-074BEF36F920"/>
+</associations>
+</Column>
+<Column name="opinion" id="014B7C94-A873-252E-ADAF-2287620B09B0">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:26 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0BAEF86-689A-D5B9-4B37-3B480140CE9B" name="Chart_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:14:58 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1AAD138-E905-4DA0-A544-13B464742425"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B0F54C3-79EF-C817-58D0-3D9E36CF6B38" name="Chart_Patient_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:45 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="590F30E0-C9E3-4DFC-0FEA-578143BB5C29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11DAE9D6-CB92-E041-11A4-1D82FD535048" name="Chart_Nurse_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:49 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48A8AD78-5B1C-622C-F693-3C39EAA5B904"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A38027C-7758-9DF6-1BCF-74B01D05D942" name="Chart_Treatment_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:15:59 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B1341DF-B0AA-CA73-49C7-95DEC88DF1E1"/>
+<colUsage columnID="54460250-633A-7464-47D8-5F1B3DAD3A6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A535FA7-75BD-07A8-379B-6A6E9FB46EC8" name="Chart_Doctor_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:16:02 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0F2CDD3-9B3C-AC3B-ED2A-0DF7510345A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

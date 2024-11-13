@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D732CE9-C180-D84D-6915-E18BE278264C" name="Treatment">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:08:06 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tr_date" id="32D9EE4D-C632-BCE0-2CA0-33CE71BD6F68">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:10:27 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trnumber" id="1772BD2B-EC07-F452-D7B4-074BEF36F920">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:10:27 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patid" id="C9D35320-5815-42A9-CDC2-C70DC28AE997">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:39 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE2DD521-1933-E56B-9B96-E0DA1BA82F4F" referredColumn="2DE4E310-4C71-9525-51A3-36EE305A455F"/>
+</associations>
+</Column>
+<Column name="docid" id="F6A4EA79-BFE7-E9DC-2558-7A734B4BA34F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:43 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B20568FC-BF56-D008-3B69-C0CD64826AEC" referredColumn="41D2A7A1-3679-6F57-8BF7-5650A4871E9F"/>
+</associations>
+</Column>
+<Column name="content" id="9699127B-1038-3EA2-F423-D3A579343D8A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:23 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83D498B7-B2E1-DFAD-242C-643251A58F27" name="Treatment_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:23 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32D9EE4D-C632-BCE0-2CA0-33CE71BD6F68"/>
+<colUsage columnID="1772BD2B-EC07-F452-D7B4-074BEF36F920"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1B8700E-9FA0-AE42-154A-D7DC8990753F" name="Treatment_Patient_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:39 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9D35320-5815-42A9-CDC2-C70DC28AE997"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6F6313E-79A8-59D6-88B7-E8E1B9AC5E7E" name="Treatment_Doctor_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:11:43 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6A4EA79-BFE7-E9DC-2558-7A734B4BA34F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

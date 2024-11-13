@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E1B0746F-0D6F-C31E-EC4F-5E01150770AB" name="Doctor">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:41:08 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="docid" id="41D2A7A1-3679-6F57-8BF7-5650A4871E9F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:42:10 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="major" id="E978E3ED-C016-0C2A-1978-02CF4EC77B86">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:42:29 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docname" id="4F0C2B5D-6F41-C561-A62E-4807B6690DA6">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:42:47 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docgender" id="808CD0A9-F977-775F-0905-FCE42FCDCE9F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:43:21 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docemail" id="FE549B38-3DCC-845E-8D8E-71B37B027CFF">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:44:56 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docmanager" id="42B255D9-C704-8796-4BFF-AD582634CF48">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:45:26 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A781F411-D3D5-284A-01EF-731C7C15FBB8" name="Doctor_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:42:13 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41D2A7A1-3679-6F57-8BF7-5650A4871E9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

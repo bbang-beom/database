@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0843B2EE-EC5D-9C13-2FD1-0BC3D28CD55C" name="Student">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:34:07 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="stuid" id="648E6480-4EF3-4A01-6C7B-F00480C0DCF6">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:34:45 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stuname" id="5AF0ABE1-36DE-D5EB-0A82-39C63C2CE5D4">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:34:59 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stussn" id="82DEF809-912A-EBAF-1BC0-051823698F3E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:35:15 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stuaddress" id="A4D37D03-57A4-64DD-0322-DBBE5FBC856E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:35:31 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stuphone" id="3F8BE027-1944-AF93-889A-92166240C82E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:35:45 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stuemail" id="1400BC57-36D5-925F-B79B-9D40B40CC6FF">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:35:58 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stupicture" id="7673DFBD-37DA-58CD-3F33-0F1927D944BA">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:37:00 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4880749-22CB-43AD-F7A4-219E44E1B853" name="Student_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 07:34:27 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="648E6480-4EF3-4A01-6C7B-F00480C0DCF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

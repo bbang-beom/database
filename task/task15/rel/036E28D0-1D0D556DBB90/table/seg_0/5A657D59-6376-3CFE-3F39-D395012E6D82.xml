@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A657D59-6376-3CFE-3F39-D395012E6D82" name="Nurse">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:03:36 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nurid" id="B5501FC2-84A7-83D5-9AA3-86CEDF876455">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:03:48 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="task" id="6A4D1A2C-5274-5013-2070-82C07EEDF760">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:04:25 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nurname" id="E2CE7A5C-6A50-DEBF-63DF-0354ED5B91B6">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:04:39 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nurgender" id="C83F72C5-80D2-0470-3C20-AFC8330DDC64">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:04:49 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nurphone" id="3D8CB94D-D95B-F90E-B1FA-DECDD3D06DE9">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:05:06 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nuremail" id="73079F2D-75D5-20FC-F656-C95CD5E4103F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:05:17 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nurmanager" id="350D512D-1775-DE91-F8FB-09A39B818501">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:05:33 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8768F30E-42B9-5E6C-FE79-70E022A99FF8" name="Nurse_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:03:50 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5501FC2-84A7-83D5-9AA3-86CEDF876455"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

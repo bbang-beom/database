@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CCD825E5-D564-A117-91C7-555FD1C3A467" name="Patient">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:46:00 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="patid" id="2DE4E310-4C71-9525-51A3-36EE305A455F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:46:36 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="docid" id="D1D9D1BA-3376-362E-E9CD-F39EC7632A8C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:06:48 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BB47884-7341-4910-0522-275020BF08BF" referredColumn="41D2A7A1-3679-6F57-8BF7-5650A4871E9F"/>
+</associations>
+</Column>
+<Column name="nurid" id="E3EE82C7-0A51-AE21-7778-AF7B04BD0EA9">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:06:51 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA5F294D-15C5-4CD4-D89C-6CFFC6046109" referredColumn="B5501FC2-84A7-83D5-9AA3-86CEDF876455"/>
+</associations>
+</Column>
+<Column name="patname" id="275ACDEF-717D-FA4C-76E0-267DED09C5FF">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:48:23 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ssn" id="F0662B19-F847-D229-F83A-8A603571237C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:48:37 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patgender" id="F223006A-1C73-6034-09BC-7BD3254C6432">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:48:50 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patphone" id="5DE0D57E-15AD-961E-5201-812D8722A180">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:49:12 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pataddress" id="A99D9A5E-BA95-A1E6-90CC-88A1C1F389E1">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:49:41 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patemail" id="D2A47E48-E4DE-F6DA-5E83-7E80FAC3C861">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:49:58 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="job" id="A18A4866-6D1B-9101-DECA-DFC84CB1A2AB">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:50:12 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CAAA2C3B-B8DD-EB3D-7583-406CD9D59D0C" name="Patient_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 02:46:38 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DE4E310-4C71-9525-51A3-36EE305A455F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D77493AA-41FE-388A-8C3E-835A8F7192AF" name="Patient_Doctor_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:06:48 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1D9D1BA-3376-362E-E9CD-F39EC7632A8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E44CE7A8-5B54-C1C5-4FC8-707218C7D06A" name="Patient_Nurse_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-13 03:06:51 UTC</createdTime>
+<ownerDesignName>task15</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3EE82C7-0A51-AE21-7778-AF7B04BD0EA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
