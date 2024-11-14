@@ -131,6 +131,3 @@ select employee_id, job_id, start_date, end_date from job_history where employee
 select employee_id from employees
 minus
 select employee_id from job_history;
-
-
-
