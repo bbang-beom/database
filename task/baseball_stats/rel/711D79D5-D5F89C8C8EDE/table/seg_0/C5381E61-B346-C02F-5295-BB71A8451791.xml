@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C5381E61-B346-C02F-5295-BB71A8451791" name="Players">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:27:27 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="playerid" id="63D0DCBD-B5C3-F568-54B2-48C3CAFE3D5D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:28:01 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="playername" id="D6A44875-62B2-AA2F-2433-577D2608A183">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:28:24 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="position" id="079F2597-E080-E1CB-71A3-7B96D4C94086">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:28:50 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="teamname" id="D2C37AB1-45ED-8ED1-EA68-3C0A9DBD3FB5">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:41:59 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57680988-101E-7A71-FAE8-D40D6494E8E7" referredColumn="C9C560A0-9996-95DD-AE9E-0ABB3621BBC7"/>
+</associations>
+</Column>
+<Column name="nation" id="BE7294A4-7D72-CBDD-57E5-42A3F1C3B12F">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:30:02 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth_date" id="5F69B296-A4E9-DCC6-6B10-336A44A9E78D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:29:22 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="640E14C8-A74E-7D5F-44D7-14CED5F709DD" name="Player_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:28:32 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63D0DCBD-B5C3-F568-54B2-48C3CAFE3D5D"/>
+<colUsage columnID="D6A44875-62B2-AA2F-2433-577D2608A183"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11C07196-A00B-CD11-69FE-1BC0A6B24431" name="Player_Teams_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:41:59 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2C37AB1-45ED-8ED1-EA68-3C0A9DBD3FB5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

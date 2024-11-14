@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="baseball_stats" id="4CBC4484-D716-E4A2-9262-E9F8B019956D" version="3.5">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:27:13 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4CBC4484-D716-E4A2-9262-E9F8B019956D</designId>
+</OSDM_Design>

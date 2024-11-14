@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4474F91A-DC9D-3965-413F-A9C3C874075A" containerWithKeyObject="468C351D-1AC6-CDCE-6A40-AA2F464E736B" localFKIndex="8986186F-02BC-B46E-4DAF-328F5D6ED3DC" name="Games_Teams_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:35:17 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<referredTableLongName>Teams</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A9C10DE2-538B-8CFF-0ECF-490A3E1A65EF</referredTableID>
+<keyObject>4B9DC411-0A85-B9AB-69F3-EE357E08F678</keyObject>
+<referredKeyID>4B9DC411-0A85-B9AB-69F3-EE357E08F678</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>teamname</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

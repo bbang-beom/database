@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9C10DE2-538B-8CFF-0ECF-490A3E1A65EF" name="Teams">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:33:29 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="teamname" id="C9C560A0-9996-95DD-AE9E-0ABB3621BBC7">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:34:10 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="supervisor" id="6503A932-FE1B-7992-E987-035A48B96792">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:34:51 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hometown" id="7C4DFFA8-7C87-BFE3-3F0D-19550F948A2D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:49:45 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="win" id="769882A3-BC15-9388-00F4-6D8B7FD49EFD">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 01:17:00 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="draw" id="6D133AB5-EBC1-0A8F-5C04-944DF464A9B4">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 02:09:25 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lose" id="8E0DD5DA-A701-90FB-CF03-06D8BB23D646">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 01:17:04 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B9DC411-0A85-B9AB-69F3-EE357E08F678" name="Teams_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-14 00:33:47 UTC</createdTime>
+<ownerDesignName>baseball_stats</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9C560A0-9996-95DD-AE9E-0ABB3621BBC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
