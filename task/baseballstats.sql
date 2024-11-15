@@ -74,9 +74,9 @@ CREATE TABLE pitchers (
     playerid   NUMBER NOT NULL,
     playername VARCHAR2(20) NOT NULL,
     win        NUMBER DEFAULT 0,
-    k          NUMBER DEFAULT 0,
-    los_point  NUMBER DEFAULT 0,
-    inning     NUMBER DEFAULT 0
+    inning     NUMBER DEFAULT 0,
+    los_point  NUMBER DEFAULT 0, 
+    k          NUMBER DEFAULT 0   
 );
 
 ALTER TABLE pitchers
@@ -151,10 +151,10 @@ insert into games values(38, 'NC 다이노스', '두산 베어스', 'NC 파크',
 insert into games values(39, 'SSG 랜더스', '한화 이글스', '랜더스 필드', '2024/04/22', 'SSG 승');
 insert into games values(40, '키움 히어로즈', 'KT 위즈', '고척 스타디움', '2024/04/22', '키움 승');
 
-insert into games values(41, '롯데 자이언츠', '기아 타이거즈', '챔피언스 필드', '2024/04/24', '무승부');
-insert into games values(42, '삼성 라이온즈', 'LG 트윈스', '잠실 야구장', '2024/04/24', 'LG 승');
+insert into games values(41, '롯데 자이언츠', '기아 타이거즈', '사직 야구장', '2024/04/24', '무승부');
+insert into games values(42, '삼성 라이온즈', 'LG 트윈스', '라이온즈 파크', '2024/04/24', 'LG 승');
 insert into games values(43, '두산 베어스', 'NC 다이노스', '잠실 야구장', '2024/04/24', 'NC 승');
-insert into games values(44, '한화 이글스', 'SSG 랜더스', '랜더스 필드', '2024/04/24', '한화 승');
+insert into games values(44, '한화 이글스', 'SSG 랜더스', '이글스 파크', '2024/04/24', '한화 승');
 insert into games values(45, 'KT 위즈', '키움 히어로즈', '위즈 파크', '2024/04/24', '키움 승');
 
 insert into games (gameid, home_teamname, away_teamname, rocation, game_date) values(46, 'LG 트윈스', '기아 타이거즈', '잠실 야구장', '2024/05/05');
@@ -215,140 +215,331 @@ insert into players values(39, '후라도', 'SP', '키움 히어로즈', '파나
 insert into players values(40, '헤이수스', 'SP', '키움 히어로즈', '대한민국', '1996/12/10');
 
 -- batter
-insert into batter values(1, 1, '김도영', 5, 3, 1, 3);
-insert into batter values(1, 2, '최형우', 5, 1, 0, 1);
-insert into batter values(1, 5, '구자욱', 5, 1, 0, 2);
-insert into batter values(1, 6, '강민호', 5, 0, 0, 0);
+insert into batters values(1, 1, '김도영', 5, 3, 1, 3);
+insert into batters values(1, 2, '최형우', 5, 1, 0, 1);
+insert into batters values(1, 5, '구자욱', 5, 1, 0, 2);
+insert into batters values(1, 6, '강민호', 5, 0, 0, 0);
 
-insert into batter values(2, 9, '오스틴', 5, 2, 1, 4);
-insert into batter values(2, 10, '홍창기', 5, 2, 0, 0);
-insert into batter values(2, 13, '양의지', 5, 1, 1, 3);
-insert into batter values(2, 14, '정수빈', 5, 1, 0, 0);
+insert into batters values(2, 9, '오스틴', 5, 2, 1, 4);
+insert into batters values(2, 10, '홍창기', 5, 2, 0, 0);
+insert into batters values(2, 13, '양의지', 5, 1, 1, 3);
+insert into batters values(2, 14, '정수빈', 5, 1, 0, 0);
 
-insert into batter values(3, 17, '강백호', 5, 1, 0, 1);
-insert into batter values(3, 18, '로하스', 5, 2, 1, 2);
-insert into batter values(3, 21, '에레디아', 5, 2, 0, 0);
-insert into batter values(3, 22, '최정', 5, 1, 1, 1);
+insert into batters values(3, 17, '강백호', 5, 1, 0, 1);
+insert into batters values(3, 18, '로하스', 5, 2, 1, 2);
+insert into batters values(3, 21, '에레디아', 5, 2, 0, 0);
+insert into batters values(3, 22, '최정', 5, 1, 1, 1);
 
-insert into batter values(4, 25, '레이예스', 5, 3, 0, 2);
-insert into batter values(4, 26, '윤동희', 5, 2, 0, 1);
-insert into batter values(4, 29, '페라자', 4, 1, 0, 0);
-insert into batter values(4, 30, '노시환', 4, 1, 0, 0);
+insert into batters values(4, 25, '레이예스', 5, 3, 0, 2);
+insert into batters values(4, 26, '윤동희', 5, 2, 0, 1);
+insert into batters values(4, 29, '페라자', 4, 1, 0, 0);
+insert into batters values(4, 30, '노시환', 4, 1, 0, 0);
 
-insert into batter values(5, 33, '박민우', 5, 2, 0, 2);
-insert into batter values(5, 34, '데이비슨', 5, 1, 1, 1);
-insert into batter values(5, 37, '김혜성', 5, 2, 0, 1);
-insert into batter values(5, 38, '송성문', 5, 1, 0, 0);
+insert into batters values(5, 33, '박민우', 5, 2, 0, 2);
+insert into batters values(5, 34, '데이비슨', 5, 1, 1, 1);
+insert into batters values(5, 37, '김혜성', 5, 2, 0, 1);
+insert into batters values(5, 38, '송성문', 5, 1, 0, 0);
 
-insert into batter values(6, 5, '구자욱', 5, 2, 1, 2);
-insert into batter values(6, 6, '강민호', 5, 1, 0, 0);
-insert into batter values(6, 1, '김도영', 5, 1, 1, 1);
-insert into batter values(6, 2, '최형우', 5, 2, 0, 0);
+insert into batters values(6, 5, '구자욱', 5, 2, 1, 2);
+insert into batters values(6, 6, '강민호', 5, 1, 0, 0);
+insert into batters values(6, 1, '김도영', 5, 1, 1, 1);
+insert into batters values(6, 2, '최형우', 5, 2, 0, 0);
 
-insert into batter values(7, 13, '양의지', 4, 1, 0, 0);
-insert into batter values(7, 14, '정수빈', 5, 2, 0, 0);
-insert into batter values(7, 9, '오스틴', 5, 2, 0, 2);
-insert into batter values(7, 10, '홍창기', 5, 1, 0, 0);
+insert into batters values(7, 13, '양의지', 4, 1, 0, 0);
+insert into batters values(7, 14, '정수빈', 5, 2, 0, 0);
+insert into batters values(7, 9, '오스틴', 5, 2, 0, 2);
+insert into batters values(7, 10, '홍창기', 5, 1, 0, 0);
 
-insert into batter values(8, 21, '에레디아', 5, 2, 0, 1);
-insert into batter values(8, 22, '최정', 5, 1, 0, 1);
-insert into batter values(8, 17, '강백호', 5, 1, 0, 1);
-insert into batter values(8, 18, '로하스', 5, 2, 0, 2);
+insert into batters values(8, 21, '에레디아', 5, 2, 0, 1);
+insert into batters values(8, 22, '최정', 5, 1, 0, 1);
+insert into batters values(8, 17, '강백호', 5, 1, 0, 1);
+insert into batters values(8, 18, '로하스', 5, 2, 0, 2);
 
-insert into batter values(9, 29, '페라자', 4, 0, 0, 0);
-insert into batter values(9, 30, '노시환', 4, 0, 0, 0);
-insert into batter values(9, 25, '레이예스', 5, 2, 0, 2);
-insert into batter values(9, 26, '윤동희', 5, 1, 0, 0);
+insert into batters values(9, 29, '페라자', 4, 0, 0, 0);
+insert into batters values(9, 30, '노시환', 4, 0, 0, 0);
+insert into batters values(9, 25, '레이예스', 5, 2, 0, 2);
+insert into batters values(9, 26, '윤동희', 5, 1, 0, 0);
 
-insert into batter values(10, 37, '김혜성', 5, 2, 0, 1);
-insert into batter values(10, 38, '송성문', 5, 2, 0, 2);
-insert into batter values(10, 33, '박민우', 5, 1, 0, 0);
-insert into batter values(10, 34, '데이비슨', 5, 1, 0, 1);
+insert into batters values(10, 37, '김혜성', 5, 2, 0, 1);
+insert into batters values(10, 38, '송성문', 5, 2, 0, 2);
+insert into batters values(10, 33, '박민우', 5, 1, 0, 0);
+insert into batters values(10, 34, '데이비슨', 5, 1, 0, 1);
 
-insert into batter values(11, 1, '김도영', 5, 2, 2, 3);
-insert into batter values(11, 2, '최형우', 5, 2, 1, 1);
-insert into batter values(11, 9, '오스틴', 4, 0, 0, 0);
-insert into batter values(11, 10, '홍창기', 5, 1, 0, 0);
+insert into batters values(11, 1, '김도영', 5, 2, 2, 3);
+insert into batters values(11, 2, '최형우', 5, 2, 1, 1);
+insert into batters values(11, 9, '오스틴', 4, 0, 0, 0);
+insert into batters values(11, 10, '홍창기', 5, 1, 0, 0);
 
-insert into batter values(12, 13, '양의지', 5, 1, 1, 2);
-insert into batter values(12, 14, '정수빈', 5, 1, 0, 0);
-insert into batter values(12, 5, '구자욱', 5, 2, 1, 2);
-insert into batter values(12, 6, '강민호', 5, 2, 0, 0);
+insert into batters values(12, 13, '양의지', 5, 1, 1, 2);
+insert into batters values(12, 14, '정수빈', 5, 1, 0, 0);
+insert into batters values(12, 5, '구자욱', 5, 2, 1, 2);
+insert into batters values(12, 6, '강민호', 5, 2, 0, 0);
 
-insert into batter values(13, 17, '강백호', 5, 1, 0, 1);
-insert into batter values(13, 18, '로하스', 4, 1, 1, 1);
-insert into batter values(13, 25, '레이예스', 5, 1, 0, 1);
-insert into batter values(13, 26, '윤동희', 5, 1, 1, 1);
+insert into batters values(13, 17, '강백호', 5, 1, 0, 1);
+insert into batters values(13, 18, '로하스', 4, 1, 1, 1);
+insert into batters values(13, 25, '레이예스', 5, 1, 0, 1);
+insert into batters values(13, 26, '윤동희', 5, 1, 1, 1);
 
-insert into batter values(14, 21, '에레디아', 5, 1, 0, 1);
-insert into batter values(14, 22, '최정', 5, 1, 0, 0);
-insert into batter values(14, 33, '박민우', 5, 1, 0, 0);
-insert into batter values(14, 34, '데이비슨', 5, 1, 1, 2);
+insert into batters values(14, 21, '에레디아', 5, 1, 0, 1);
+insert into batters values(14, 22, '최정', 5, 1, 0, 0);
+insert into batters values(14, 33, '박민우', 5, 1, 0, 0);
+insert into batters values(14, 34, '데이비슨', 5, 1, 1, 2);
 
-insert into batter values(15, 29, '페라자', 5, 2, 1, 2);
-insert into batter values(15, 30, '노시환', 5, 1, 1, 1);
-insert into batter values(15, 37, '김혜성', 5, 1, 0, 0);
-insert into batter values(15, 38, '송성문', 5, 1, 0, 1);
+insert into batters values(15, 29, '페라자', 5, 2, 1, 2);
+insert into batters values(15, 30, '노시환', 5, 1, 1, 1);
+insert into batters values(15, 37, '김혜성', 5, 1, 0, 0);
+insert into batters values(15, 38, '송성문', 5, 1, 0, 1);
 
-insert into batter values(20, 37, '김혜성', 6, 3, 0, 1);
-insert into batter values(20, 38, '송성문', 6, 2, 1, 2);
-insert into batter values(20, 29, '페라자', 6, 2, 0, 2);
-insert into batter values(20, 30, '노시환', 6, 2, 0, 1);
+insert into batters values(20, 37, '김혜성', 6, 3, 0, 1);
+insert into batters values(20, 38, '송성문', 6, 2, 1, 2);
+insert into batters values(20, 29, '페라자', 6, 2, 0, 2);
+insert into batters values(20, 30, '노시환', 6, 2, 0, 1);
 
-insert into batter values(21, 1, '김도영', 5, 1, 1, 1);
-insert into batter values(21, 2, '최형우', 5, 2, 0, 1);
-insert into batter values(21, 13, '양의지', 4, 0, 0, 0);
-insert into batter values(21, 14, '정수빈', 4, 0, 0, 0);
+insert into batters values(21, 1, '김도영', 5, 1, 1, 1);
+insert into batters values(21, 2, '최형우', 5, 2, 0, 1);
+insert into batters values(21, 13, '양의지', 4, 0, 0, 0);
+insert into batters values(21, 14, '정수빈', 4, 0, 0, 0);
 
-insert into batter values(22, 5, '구자욱', 6, 2, 0, 1);
-insert into batter values(22, 6, '강민호', 4, 2, 1, 2);
-insert into batter values(22, 17, '강백호', 5, 1, 0, 0);
-insert into batter values(22, 18, '로하스', 5, 2, 0, 1);
+insert into batters values(22, 5, '구자욱', 6, 2, 0, 1);
+insert into batters values(22, 6, '강민호', 4, 2, 1, 2);
+insert into batters values(22, 17, '강백호', 5, 1, 0, 0);
+insert into batters values(22, 18, '로하스', 5, 2, 0, 1);
 
-insert into batter values(23, 9, '오스틴', 4, 0, 0, 1);
-insert into batter values(23, 10, '홍창기', 3, 0, 0, 0);
-insert into batter values(23, 25, '레이예스', 6, 2, 0, 2);
-insert into batter values(23, 26, '윤동희', 6, 2, 1, 2);
+insert into batters values(23, 9, '오스틴', 4, 0, 0, 1);
+insert into batters values(23, 10, '홍창기', 3, 0, 0, 0);
+insert into batters values(23, 25, '레이예스', 6, 2, 0, 2);
+insert into batters values(23, 26, '윤동희', 6, 2, 1, 2);
 
-insert into batter values(24, 21, '에레디아', 5, 3, 0, 2);
-insert into batter values(24, 22, '최정', 5, 2, 1, 1);
-insert into batter values(24, 37, '김혜성', 5, 2, 0, 0);
-insert into batter values(24, 38, '송성문', 5, 3, 0, 2);
+insert into batters values(24, 21, '에레디아', 5, 3, 0, 2);
+insert into batters values(24, 22, '최정', 5, 2, 1, 1);
+insert into batters values(24, 37, '김혜성', 5, 2, 0, 0);
+insert into batters values(24, 38, '송성문', 5, 3, 0, 2);
 
-insert into batter values(25,  29, '페라자', 4, 1, 1, 3);
-insert into batter values(25, 30, '노시환', 4, 2, 0, 1);
-insert into batter values(25, 33, '박민우', 4, 1, 0, 0);
-insert into batter values(25, 34, '데이비슨', 6, 2, 2, 3);
+insert into batters values(25,  29, '페라자', 4, 1, 1, 3);
+insert into batters values(25, 30, '노시환', 4, 2, 0, 1);
+insert into batters values(25, 33, '박민우', 4, 1, 0, 0);
+insert into batters values(25, 34, '데이비슨', 6, 2, 2, 3);
 
-insert into batter values(26, 1, '김도영', 3, 0, 0, 0);
-insert into batter values(26, 2, '최형우', 4, 1, 0, 0);
-insert into batter values(26, 21, '에레디아', 5, 2, 0, 0);
-insert into batter values(26, 22, '최정', 3, 0, 0, 0);
+insert into batters values(26, 1, '김도영', 3, 0, 0, 0);
+insert into batters values(26, 2, '최형우', 4, 1, 0, 0);
+insert into batters values(26, 21, '에레디아', 5, 2, 0, 0);
+insert into batters values(26, 22, '최정', 3, 0, 0, 0);
 
-insert into batter values(27, 5, '구자욱', 3, 1, 0, 1);
-insert into batter values(27, 6, '강민호', 5, 1, 0, 0);
-insert into batter values(27, 25, '레이예스', 5, 1, 0, 0);
-insert into batter values(27, 26, '윤동희', 4, 0, 0, 0);
+insert into batters values(27, 5, '구자욱', 3, 1, 0, 1);
+insert into batters values(27, 6, '강민호', 5, 1, 0, 0);
+insert into batters values(27, 25, '레이예스', 5, 1, 0, 0);
+insert into batters values(27, 26, '윤동희', 4, 0, 0, 0);
 
-insert into batter values(28, 9, '오스틴', 6, 3, 1, 5);
-insert into batter values(28, 10, '홍창기', 4, 5, 0, 0);
-insert into batter values(28, 29, '페라자', 4, 1, 0, 1);
-insert into batter values(28, 30, '노시환', 4, 1, 0, 0);
+insert into batters values(28, 9, '오스틴', 6, 3, 1, 5);
+insert into batters values(28, 10, '홍창기', 4, 5, 0, 0);
+insert into batters values(28, 29, '페라자', 4, 1, 0, 1);
+insert into batters (gameid, playerid, playername) values(28, 30, '노시환');
 
-insert into batter values(29, 37, '김혜성', 5, 1, 0, 0);
-insert into batter values(29, 38, '송성문', 3, 0, 0, 0);
-insert into batter values(29, 13, '양의지', 5, 2, 1, 2);
-insert into batter values(29, 14, '정수빈', 3, 1, 0, 0);
+insert into batters values(29, 37, '김혜성', 5, 1, 0, 0);
+insert into batters values(29, 38, '송성문', 3, 0, 0, 0);
+insert into batters values(29, 13, '양의지', 5, 2, 1, 2);
+insert into batters values(29, 14, '정수빈', 3, 1, 0, 0);
 
-insert into batter values(30, 17, '강백호', 4, 1, 0, 1);
-insert into batter values(30, 18, '로하스', 5, 2, 0, 1);
-insert into batter values(30, 33, '박민우', 3, 1, 0, 0);
-insert into batter values(30, 34, '데이비슨', 5, 2, 2, 2);
+insert into batters values(30, 17, '강백호', 4, 1, 0, 1);
+insert into batters values(30, 18, '로하스', 5, 2, 0, 1);
+insert into batters values(30, 33, '박민우', 3, 1, 0, 0);
+insert into batters values(30, 34, '데이비슨', 5, 2, 2, 2);
 
+insert into batters values(31, 1, '김도영', 5, 2, 1, 2);
+insert into batters values(31, 2, '최형우', 6, 2, 0, 1);
+insert into batters values(31, 37, '김혜성', 5, 1, 0, 2);
+insert into batters (gameid, playerid, playername) values(31, 38, '송성문');
 
+insert into batters values(32, 5, '구자욱', 5, 2, 1, 4);
+insert into batters (gameid, playerid, playername) values(32, 6, '강민호');
+insert into batters values(32, 33, '박민우', 6, 2, 0, 0);
+insert into batters values(32, 34, '데이비슨', 5, 2, 2, 3);
 
-select * from teams;
-select * from games;
-select * from players;
-select * from batters;
-select * from pitchers;
+insert into batters values(33, 13, '양의지', 5, 1, 1, 2);
+insert into batters values(33, 14, '정수빈', 5, 2, 1, 2);
+insert into batters values(33, 29, '페라자', 5, 2, 0, 0);
+insert into batters (gameid, playerid, playername) values(33, 30, '노시환');
+
+insert into batters values(34, 21, '에레디아', 3, 2, 0, 1);
+insert into batters values(34, 22, '최정', 6, 2, 1, 1);
+insert into batters values(34, 25, '레이예스', 5, 3, 0, 2);
+insert into batters values(34, 26, '윤동희', 4, 2, 0, 1);
+
+insert into batters values(35, 17, '강백호', 4, 1, 0, 1);
+insert into batters values(35, 18, '로하스', 3, 1, 0, 1);
+insert into batters values(35, 9, '오스틴', 6, 2, 0, 4);
+insert into batters values(35, 10, '홍창기', 5, 2, 0, 0);
+
+insert into batters values(36, 1, '김도영', 3, 1, 1, 1);
+insert into batters values(36, 2, '최형우', 3, 0, 0, 0);
+insert into batters values(36, 25, '레이예스', 4, 1, 0, 0);
+insert into batters values(36, 26, '윤동희', 4, 2, 0, 1);
+
+insert into batters values(37, 9, '오스틴', 4, 1, 0, 2);
+insert into batters values(37, 10, '홍창기', 5, 1, 0, 0);
+insert into batters values(37, 5, '구자욱', 6, 3, 1, 3);
+insert into batters (gameid, playerid, playername) values(37, 6, '강민호');
+
+insert into batters values(38, 33, '박민우', 6, 2, 0, 1);
+insert into batters values(38, 34, '데이비슨', 5, 1, 1, 2);
+insert into batters values(38, 13, '양의지', 4, 1, 1, 1);
+insert into batters values(38, 14, '정수빈', 4, 1, 0, 1);
+
+insert into batters values(39, 21, '에레디아', 5, 2, 0, 1);
+insert into batters values(39, 22, '최정', 4, 1, 1, 1);
+insert into batters values(39, 29, '페라자', 3, 0, 0, 0);
+insert into batters (gameid, playerid, playername) values(39, 30, '노시환');
+
+insert into batters values(40, 37, '김혜성', 5, 2, 1, 2);
+insert into batters (gameid, playerid, playername) values(40, 38, '송성문');
+insert into batters values(40, 17, '강백호', 4, 1, 0, 0);
+insert into batters values(40, 18, '로하스', 5, 2, 0, 1);
+
+insert into batters values(41, 25, '레이예스', 5, 2, 0, 2);
+insert into batters values(41, 26, '윤동희', 4, 1, 0, 0);
+insert into batters values(41, 1, '김도영', 5, 2, 1, 2);
+insert into batters values(41, 2, '최형우', 5, 1, 0, 0);
+
+insert into batters values(42, 5, '구자욱', 4, 1, 0, 1);
+insert into batters (gameid, playerid, playername) values(42, 6, '강민호');
+insert into batters values(42, 9, '오스틴', 5, 1, 0, 3);
+insert into batters values(42, 10, '홍창기', 5, 2, 0, 1);
+
+insert into batters values(43, 13, '양의지', 5, 2, 0, 2);
+insert into batters values(43, 14, '정수빈', 6, 2, 0, 1);
+insert into batters values(43, 33, '박민우', 5, 2, 0, 1);
+insert into batters values(43, 34, '데이비슨', 5, 1, 1, 2);
+
+insert into batters values(44, 29, '페라자', 3, 1, 0, 1);
+insert into batters (gameid, playerid, playername) values(44, 30, '노시환');
+insert into batters values(44, 21, '에레디아', 4, 2, 0, 1);
+insert into batters values(44, 22, '최정', 3, 1, 1, 1);
+
+insert into batters values(45, 17, '강백호', 4, 1, 0, 1);
+insert into batters values(45, 18, '로하스', 5, 2, 1, 2);
+insert into batters values(45, 37, '김혜성', 6, 3, 1, 3);
+insert into batters (gameid, playerid, playername) values(45, 38, '송성문');
+
+-- pitchers
+insert into pitchers values (1, 3, '양현종', 1, 6, 3, 4);
+insert into pitchers values (1, 7, '레예스', 0, 7, 2, 8);
+
+insert into pitchers values (2, 11, '임찬규', 0, 6, 3, 5);
+insert into pitchers values (2, 15, '곽빈', 0, 6, 3, 7);
+
+insert into pitchers values (3, 19, '고영표', 0, 5, 4, 6);
+insert into pitchers values (3, 23, '김광현', 0, 6, 3, 5);
+
+insert into pitchers values (4, 31, '류현진', 0, 6, 4, 6);
+insert into pitchers values (4, 27, '반즈', 1, 7, 0, 9);
+
+insert into pitchers values (5, 35, '하트', 1, 8, 0, 8);
+insert into pitchers values (5, 39, '후라도', 0, 7, 2, 7);
+
+insert into pitchers values (6, 8, '원태인', 1, 6, 2, 5);
+insert into pitchers values (6, 4, '네일', 0, 6, 3, 8);
+
+insert into pitchers values (7, 16, '최원준', 0, 4, 4, 3);
+insert into pitchers values (7, 12, '에르난데스', 1, 6, 2, 7);
+
+insert into pitchers values (8, 24, '앤더슨', 1, 6, 2, 6);
+insert into pitchers values (8, 20, '소형준', 0, 6, 4, 3);
+
+insert into pitchers values (9, 32, '문동주', 0, 3, 5, 2);
+insert into pitchers values (9, 28, '윌커슨', 1, 9, 0, 10);
+
+insert into pitchers values (10, 40, '헤이수스', 1, 6, 2, 6);
+insert into pitchers values (10, 36, '신민혁', 0, 2, 4, 0);
+
+insert into pitchers values (11, 3, '양현종', 0, 5, 2, 5);
+insert into pitchers values (11, 11, '임찬규', 0, 6, 2, 4);
+
+insert into pitchers values (12, 7, '레예스', 1, 7, 1, 8);
+insert into pitchers values (12, 15, '곽빈', 0, 6, 2, 7);
+
+insert into pitchers values (13, 19, '고영표', 0, 3, 6, 2);
+insert into pitchers values (13, 27, '반즈', 1, 7, 1, 12);
+
+insert into pitchers values (14, 23, '김광현', 0, 6, 2, 4);
+insert into pitchers values (14, 35, '하트', 1, 8, 0, 11);
+
+insert into pitchers values (15, 31, '류현진', 1, 7, 2, 5);
+insert into pitchers values (15, 39, '후라도', 0, 6, 3, 7);
+
+insert into pitchers values (20, 40, '헤이수스', 0, 6, 0, 7);
+insert into pitchers values (20, 32, '문동주', 0, 5, 0, 6);
+
+insert into pitchers values (21, 4, '네일', 1, 8, 1, 12);
+insert into pitchers values (21, 15, '곽빈', 0, 7, 2, 7);
+
+insert into pitchers values (22, 8, '원태인', 1, 6, 3, 5);
+insert into pitchers values (22, 20, '소형준', 0, 5, 4, 4);
+
+insert into pitchers values (23, 12, '에르난데스', 0, 6, 3, 8);
+insert into pitchers values (23, 28, '윌커슨', 1, 7, 1, 8);
+
+insert into pitchers values (24, 24, '앤더슨', 1, 7, 0, 9);
+insert into pitchers values (24, 39, '후라도', 0, 5, 4, 6);
+
+insert into pitchers values (25, 31, '류현진', 1, 6, 3, 4);
+insert into pitchers values (25, 36, '신민혁', 0, 5, 5, 5);
+
+insert into pitchers values (26, 3, '양현종', 0, 6, 2, 6);
+insert into pitchers values (26, 23, '김광현', 0, 6, 1, 8);
+
+insert into pitchers values (27, 7, '레예스', 1, 9, 0, 10);
+insert into pitchers values (27, 27, '반즈', 0, 8, 1, 14);
+
+insert into pitchers values (28, 4, '네일', 1, 6, 3, 7);
+insert into pitchers values (28, 32, '문동주', 0, 4, 6, 2);
+
+insert into pitchers values (29, 40, '헤이수스', 0, 6, 1, 7);
+insert into pitchers values (29, 16, '최원준', 1, 7, 1, 8);
+
+insert into pitchers values (30, 19, '고영표', 0, 6, 1, 5);
+insert into pitchers values (30, 35, '하트', 0, 7, 1, 9);
+
+insert into pitchers values (31, 3, '양현종', 0, 6, 2, 3);
+insert into pitchers values (31, 39, '후라도', 0, 6, 1, 7);
+
+insert into pitchers values (32, 8, '원태인', 1, 5, 4, 5);
+insert into pitchers values (32, 36, '신민혁', 0, 4, 4, 6);
+
+insert into pitchers values (33, 15, '곽빈', 0, 5, 3, 6);
+insert into pitchers values (33, 31, '류현진', 0, 5, 4, 3);
+
+insert into pitchers values (34, 24, '앤더슨', 0, 6, 7, 7);
+insert into pitchers values (34, 28, '윌커슨', 0, 5, 5, 4);
+
+insert into pitchers values (35, 20, '소형준', 0, 6, 2, 6);
+insert into pitchers values (35, 11, '임찬규', 0, 5, 3, 5);
+
+insert into pitchers values (36, 4, '네일', 0, 7, 2, 9);
+insert into pitchers values (36, 27, '반즈', 1, 7, 1, 10);
+
+insert into pitchers values (37, 12, '에르난데스', 0, 5, 3, 5);
+insert into pitchers values (37, 7, '레예스', 0, 5, 2, 4);
+
+insert into pitchers values (38, 35, '하트', 0, 7, 0, 8);
+insert into pitchers values (38, 16, '최원준', 0, 6, 0, 5);
+
+insert into pitchers values (39, 23, '김광현', 1, 6, 0, 5);
+insert into pitchers values (39, 32, '문동주', 0, 6, 1, 4);
+
+insert into pitchers values (40, 40, '헤이수스', 1, 6, 2, 7);
+insert into pitchers values (40, 19, '고영표', 0, 5, 3, 3);
+
+insert into pitchers values (41, 28, '윌커슨', 0, 7, 0, 9);
+insert into pitchers values (41, 3, '양현종', 0, 5, 1, 5);
+
+insert into pitchers values (42, 8, '원태인', 0, 6, 4, 7);
+insert into pitchers values (42, 11, '임찬규', 1, 7, 3, 6);
+
+insert into pitchers values (43, 15, '곽빈', 0, 7, 4, 6);
+insert into pitchers values (43, 36, '신민혁', 1, 5, 3, 3);
+
+insert into pitchers values (44, 31, '류현진', 1, 5, 1, 4);
+insert into pitchers values (44, 24, '앤더슨', 0, 8, 4, 6);
+
+insert into pitchers values (45, 20, '소형준', 0, 6, 2, 4);
+insert into pitchers values (45, 39, '후라도', 1, 6, 1, 5);
