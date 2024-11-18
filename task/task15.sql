@@ -131,3 +131,20 @@ select employee_id, job_id, start_date, end_date from job_history where employee
 select employee_id from employees
 minus
 select employee_id from job_history;
+
+-- 데이터 삽입
+-- teams
+insert into teams (teamname, supervisor, hometown) values('롯데 자이언츠', '김태형', '부산');
+-- games
+insert into games values(4, '롯데 자이언츠', '한화 이글스', '사직 야구장', '2024/04/02', '롯데 승');
+-- players
+insert into players values(26, '윤동희', 'CF', '롯데 자이언츠', '대한민국', '2003/09/18');
+-- batters
+insert into batters values(23, 26, '윤동희', 6, 2, 1, 2);
+-- pitchers
+insert into pitchers values (9, 28, '윌커슨', 1, 9, 0, 10);
+-- 경기를 뛰지 않은 선수
+insert into batters (gameid, playerid, playername) values(37, 6, '강민호');
+
+
+

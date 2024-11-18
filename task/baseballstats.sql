@@ -43,7 +43,6 @@ CREATE TABLE players (
 
 ALTER TABLE players ADD CONSTRAINT player_pk PRIMARY KEY ( playerid,
                                                            playername );
-
 ALTER TABLE players
     ADD CONSTRAINT player_teams_fk FOREIGN KEY ( teamname )
         REFERENCES teams ( teamname );
@@ -214,7 +213,7 @@ insert into players values(38, '송성문', '3B', '키움 히어로즈', '대한
 insert into players values(39, '후라도', 'SP', '키움 히어로즈', '파나마', '1996/01/30');
 insert into players values(40, '헤이수스', 'SP', '키움 히어로즈', '대한민국', '1996/12/10');
 
--- batter
+-- batters
 insert into batters values(1, 1, '김도영', 5, 3, 1, 3);
 insert into batters values(1, 2, '최형우', 5, 1, 0, 1);
 insert into batters values(1, 5, '구자욱', 5, 1, 0, 2);

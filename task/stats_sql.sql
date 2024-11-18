@@ -1,7 +1,7 @@
 -- sql
 -- 각 테이블의 모든 정보
 select * from teams;
-select * from games;
+select * from games; 
 select * from players;
 select * from batters;
 select * from pitchers;
@@ -131,6 +131,10 @@ where TO_CHAR(birth_date, 'DAY') = '화요일';
 -- 8월에 생일인 선수들 출력
 select playername, TO_CHAR(birth_date, 'MM') as month from players 
 where TO_CHAR(birth_date, 'MM') = '08';
+-- 생일이 같은 사람들 출력
+select p1.playername, p2.playername, TO_CHAR(birth_date, 'MM/DD') as birthday
+from players p1, (select playername, TO_CHAR(birth_date, 'MM/DD') as birthday  from players) p2
+where TO_CHAR(birth_date, 'MM/DD') = p2.birthday and p1.playername != p2.playername;
 -- 기본 연산
 -- 각 팀들의 승률(승 / (승 + 무 + 패))출력:
 select teamname, (win / (win + draw + lose)) as "win_rate" from teams;
@@ -154,19 +158,6 @@ select distinct home_teamname, rocation from games where rocation like '%파크'
 select playername from players where playername like '__';
 -- '스'로 끝나는 팀 이름들 출력
 select teamname from teams where teamname like '%스';
--- 위의 문장을 위의 순위함수와 함께 이용하여 스로 끝나는 팀들의 순위 출력
-select t.teamname, r.rank from 
-(select teamname,(win - lose) as gains, rank() over(order by (win - lose) desc) as rank from teams) r,
-(select teamname from teams where teamname like '%스') t
-where t.teamname = r.teamname;
-
--- 취소되었거나 or 치뤄지지 않은 경기 확인
-select * from games where result like '%취소%' or result like '%예정%';
--- 위를 이용하여 players와 조인하여 치뤄지지 않은 경기에 출전할 선수들 출력
-select p.teamname, p.playername, p.position from players p, teams t,
-(select * from games where result like '%예정%') g
-where (g.home_teamname = t.teamname or g.away_teamname = t.teamname)
-and t.teamname = p.teamname;
 
 -- 순위 함수
 -- 야구는 승패마진(승-패)로 순위를 결정한다. 이에따라 현재 순위 출력
@@ -181,14 +172,27 @@ select p.teamname, p.playername, p.position from players p,
 from (select teamname, rank() over(order by (win - lose) desc) as rank, hometown from teams order by rank) 
 where rownum = 1) t
 where p.teamname = t.teamname;
+-- 문자열에서 이용한 문장을 순위함수와 함께 이용하여 스로 끝나는 팀들의 순위 출력
+select t.teamname, r.rank from 
+(select teamname,(win - lose) as gains, rank() over(order by (win - lose) desc) as rank from teams) r,
+(select teamname from teams where teamname like '%스') t
+where t.teamname = r.teamname;
 
 -- 조인
+-- 문자열에서 했던 취소되었거나 or 치뤄지지 않은 경기 확인
+select * from games where result like '%취소%' or result like '%예정%';
+-- 위를 이용하여 players와 조인하여 치뤄지지 않은 경기에 출전할 선수들 출력
+select p.teamname, p.playername, p.position from players p, teams t,
+(select * from games where result like '%예정%') g
+where (g.home_teamname = t.teamname or g.away_teamname = t.teamname)
+and t.teamname = p.teamname;
+
 -- gameid를 이용해 투수 '반즈'선수가 경기를 했던 경기에 타자들의 기록을 출력
 select p.playername, b.playername, b.ab, b.hit, b.homerun, b.rbi 
 from batters b, pitchers p
 where p.gameid = b.gameid and p.playername = '반즈';
 -- 위의 sql문에서 롯데 자이언츠 타자들의 gmaeid를 제외하면 상대팀의 타자들의 기록
--- 즉, 상대기록을 볼 수 있다.
+-- 즉, 상대기록을 볼 수 있다.(부속 질의)
 select p.playername, b.playername, b.ab, b.hit, b.homerun, b.rbi 
 from batters b, pitchers p
 where p.gameid = b.gameid and p.playername = '반즈' 
@@ -197,7 +201,6 @@ and b.playerid not in (select playerid from players where teamname = '롯데 자
 -- 그룹 함수
 -- batters와 pitchers 테이블을 만든 이유는 각 경기마다 선수의 성적을 집계하기 위함이다.
 -- 이를 이용하여 각 선수의 기록들을 출력
-
 -- 평균보다 많은 이닝을 던진 투수 출력
 select playerid, playername, avg(inning) from pitchers p 
 group by playerid, playername 
@@ -245,6 +248,30 @@ from players p,
 (select max(sum(k)) from pitchers group by playerid, playername)) pc
 where p.playername = pc.playername;
 
+-- 사직 야구장에서 경기 예정인 선수(타자)들의 성적 출력 
+select b.playername, sum(ab) "타수", sum(hit) "안타", sum(homerun) "홈런", sum(rbi)"타점" 
+from batters b,
+(select p.teamname, p.playername, p.position from players p, teams t,
+(select * from games where result like '%예정%' and rocation = '사직 야구장') g
+where (g.home_teamname = t.teamname or g.away_teamname = t.teamname)
+and t.teamname = p.teamname) ep
+where ep.playername = b.playername     
+group by b.playerid, b.playername;                     
+
+-- 골든글러브
+-- 야구에서는 매년 각 포지션에서 가장 뛰어난 활약을 보인 선수에게 골든글러브라는 상을 수여한다.
+-- 안타와 타점은 1점, 홈런은 2점의 가산점을 부여한다고 가정하고 각 포지션 별 골든글러브 출력
+-- 3루수 골든글러브 수상자 출력
+select p.playername as "수상자", p.position, b.point from players p, 
+(select playerid, playername, (sum(hit) * 1 + sum(homerun) * 2 + sum(rbi) * 1) as point 
+from batters group by playername, playerid order by point desc ) b
+where p.playerid = b.playerid and p.position = '3B' and rownum = 1;
+-- 투수 골든 글러브 삼진 + (실점/이닝 * -1)
+select p.playername as "수상자", p.position, pc.point from players p, 
+(select playerid, playername, floor(sum(k) * 1 + (sum(los_point)/(sum(inning) * (-1)))) as point 
+from pitchers group by playername, playerid order by point desc ) pc
+where p.playerid = pc.playerid and p.position = 'SP' and rownum = 1;
+
 -- 야구에는 '규정 이닝', '규정 타석'이 존재한다. 
 -- 규정 이닝(타석)이란 정식 기록으로 인정할 수 있는 이닝(타석) 수이고,
 -- 이는 진행한 경기수에 따라 정해진다.
@@ -255,8 +282,7 @@ where p.playername = pc.playername;
 select floor(count(*) * 3.1) as "규정 타석" from games 
 where (home_teamname = '한화 이글스' or away_teamname = '한화 이글스')
 and (result != '우천 취소' and result != '경기 예정');
-
--- 위를 이용하여 한화 이글스팀 소속의 선수 중 규정 타석을 채우지 못한 선수 출력
+-- 위를 이용하여 한화 이글스팀 소속의 선수 중 규정 타석을 채우지 못한 선수(타자) 출력
 select playername, ab as "타석 수", 
 (select floor(count(*) * 3.1) as "규정 타석" from games 
 where (home_teamname = '한화 이글스' or away_teamname = '한화 이글스')
@@ -269,14 +295,26 @@ where (home_teamname = '한화 이글스' or away_teamname = '한화 이글스')
 and (result != '우천 취소' and result != '경기 예정'))) b
 where p.playerid = b.playerid;
 
+-- 한화 이글스팀 소속의 선수 중 규정 이닝을 채운 선수(투수) 출력
+select playername, inning as "이닝 수", 
+(select count(*) as "규정 이닝" from games 
+where (home_teamname = '한화 이글스' or away_teamname = '한화 이글스')
+and (result != '우천 취소' and result != '경기 예정')) as "규정 이닝" 
+from 
+(select playerid from players where teamname = '한화 이글스') p,
+(select playerid, playername, sum(inning) inning from pitchers group by playerid, playername 
+having sum(inning) >= (select count(*) as "규정 이닝" from games 
+where (home_teamname = '한화 이글스' or away_teamname = '한화 이글스')
+and (result != '우천 취소' and result != '경기 예정'))) pc
+where p.playerid = pc.playerid;
+
 -- view
 -- players에서 우리나라 국적이 아닌 선수들을 뽑아 외국인선수(foreign_players)라는 새로운 view를 생성
-create view foreign_players as
-select * from players where nation != '대한민국';
+create view foreign_players as select * from players where nation != '대한민국';
 select * from foreign_players;
 
 -- 생성한 view를 조인해 외국인 타자들만 출력 
-select distinct f.playername from batters b, foreign_players f
+select distinct f.playername, f.nation from batters b, foreign_players f
 where b.playerid = f.playerid;
 
 -- 외국인 타자들 중 홈런 개수 순으로 출력
@@ -303,12 +341,38 @@ from foreign_players f,
 (select nation, count(*) from foreign_players group by nation 
 having count(*) = (select max(count(*)) from foreign_players group by nation)) c
 where c.nation = f.nation);
+
 select * from most_numbers_of_foreign;
 
--- 골든글러브
+-- alter
+-- players에서 데이터가 사라지면 batters와 pitchers의 데이터도 함께 사라지도록 설정
+-- 기존 제약조건 삭제
+ALTER TABLE batters
+    drop CONSTRAINT batter_player_fk;
+ALTER TABLE pitchers
+    drop CONSTRAINT pitcher_player_fk;    
+-- 제약조건 새로 추가
+ALTER TABLE batters
+    ADD CONSTRAINT batter_player_fk
+        FOREIGN KEY ( playerid,
+                      playername )
+            REFERENCES players ( playerid,
+                                 playername ) on delete cascade;
 
+ALTER TABLE pitchers
+    ADD CONSTRAINT pitcher_player_fk
+        FOREIGN KEY ( playerid,
+                      playername )
+            REFERENCES players ( playerid,
+                                 playername ) on delete cascade;                                 
+-- delete
+-- players와 함께 batters도 29번(페라자) 삭제
+delete from players where playerid = 29;
+-- players와 함께 pitchers도 39번(후라도) 삭제
+delete from players where playerid = 39;
 
-
-
+select * from players;
+select * from batters;
+select * from pitchers;
 
 
